@@ -1,0 +1,130 @@
+1 : Basic frontend installations
+npx create-react-app crud-react 
+npx create-react-app frontend
+or
+npx create-react-app . (to install in current directory)
+npm start to run app
+npm install react-bootstrap bootstrap
+
+Note: After installation, you'll need to import Bootstrap's CSS in your src/index.js or src/App.js file:
+import 'bootstrap/dist/css/bootstrap.min.css';
+App.js:(just to test the booststrap)
+import Button from "react-bootstrap/Button";
+
+2: Create backend folder
+run: npm init --y
+run: npm i 
+run: npm i express
+create src folder and server.js
+  to run the server 
+  : npm run start
+
+
+  3: Frontend 
+  Crete components in frontend e.g updateUser, dashboard, postUser etc their corresponding files eg updateUser.js, dashboard.js, postUser.js etc
+
+
+  4: Frontend
+  install react-DOM :
+   npm install react-dom
+   
+   (react-dom is a core package of React itself and is primarily used for rendering React components into the DOM. It acts as a bridge between React components and the actual DOM in the browser.)
+
+   npm install react-router-dom
+
+   (react-router-dom is a library that allows you to implement dynamic routing in a web application. <BrowserRouter>, <Route>, <Link>, <Switch>, etc.)
+
+
+NB: Now lets enable routing
+  import { BrowserRouter } from "react-router-dom";,
+  use it like this in index.js : 
+   <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  import { Route, Routes } from "react-router-dom"; in app.js
+
+
+ 5: frontend
+  create routes in app.js and import all the routes
+  import Dashboard from "./components/dashboard/Dashboard";
+     return (
+    <>
+      <Routes>
+      <Route path="/" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </>
+  );
+
+
+6: Backend
+run: npm install mongoose
+create a new folder: configuration and a file dbConfig.js inside it
+ (****creating and connecting db 
+install mongoose using compass****)
+
+setup dbConfig with connection string from mongodb
+import dbconfig into server.js and call dbconfig()
+
+
+7: frontend
+Creating navbar using react booststrap library
+https://react-bootstrap.github.io/docs/getting-started/introduction
+copy the navbar into the header.js components
+import the necessary filesimport { Container, Nav, Navbar } from "react-bootstrap";
+edit each nav link to conform with the router
+import { Link } from 'react-router-dom';
+edit the nav-links add (remove the href then as and to )
+            <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">
+              Dashboard
+            </Nav.Link>
+
+
+8: Backend
+install npm install express body-parser
+i) create model folder and a userSchema.js in it 
+// Import mongoose from the configured dbConfig into it.
+const mongoose = require("../configuration/dbConfig");
+create userSchema and its model and export it
+
+ii) create services folder and userServices.js where the code to create new user resides. import the userSchema from the model into it.
+
+iii) Create controller folder and userController.js in it. import the UserServices into it
+
+iv) create route folder and UserRoute.js into it
+import express and UserController into it
+
+v) go to the server and call the router then implement it.
+app.use("/api/user", userRouter);
+
+
+
+
+9: Frontend
+@postuser.js design the form and css
+
+10: frontend
+Calling Post User API using handle submit function to submit the data into the database.
+
+
+10B: Backend
+CORS Configuration
+CORS allows your server to handle requests from different origins when your frontend and backend are served from different addresses.
+run: npm install cors
+import and use it in the server
+
+12: Backend 
+fecting all users
+
+13: Frontend 
+calling  all users
+npm install react-icons
+npm install react-bootstrap bootstrap
+
+
+
+
+
+
+
