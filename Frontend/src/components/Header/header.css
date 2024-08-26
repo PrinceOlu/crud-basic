@@ -1,0 +1,19 @@
+/* header.css */
+.navbar {
+  background-color: #343a40; /* dark background */
+}
+
+.navbar-brand {
+  color: white; /* brand text color */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.new-link {
+  color: white; /* link text color */
+  margin-left: auto; /* push to the right */
+}
+
+.nav-link:hover {
+  color: #ffc107; /* hover color for links */
+}
