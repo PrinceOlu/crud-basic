@@ -1,0 +1,57 @@
+
+1: Create backend folder
+run: npm init --y (package.json)
+run: npm i  (package-lock.json)
+run: npm i express (node_modules for all dependencies)
+create src folder and server.js (and write the server codes)
+  to run the server 
+  : npm run start
+
+2: Backend
+2b) run: npm install mongoose
+2c) create a new folder: configuration and a file dbConfig.js inside it
+ (****creating and connecting db 
+install mongoose using compass****)
+
+2d) setup dbConfig with connection string from mongodb
+import dbconfig into server.js and call dbconfig()
+
+
+3: Backend
+install npm install express body-parser
+i) create model folder and a userSchema.js in it 
+// Import mongoose from the configured dbConfig into it.
+const mongoose = require("../configuration/dbConfig");
+create userSchema and its model and export it
+
+ii) create services folder and userServices.js where the code to create new user resides. import the userSchema from the model into it.
+
+iii) Create controller folder and userController.js in it. import the UserServices into it
+
+iv) create route folder and UserRoute.js into it
+import express and UserController into it
+
+v) go to the server and call the router then implement it.
+app.use("/api/user", userRouter);
+
+
+4)  Backend
+CORS Configuration
+CORS allows your server to handle requests from different origins when your frontend and backend are served from different addresses.
+run: npm install cors
+import and use it in the server
+
+5)  Backend (fecting all users)
+in UserServices create a function to get all users. you can put both the function to add new user and fetch all users in a mother function and return their values using return
+return {
+    createUser,
+    getAllUsers,
+  };
+
+  6) Backend 
+  import userServices into userController
+  In userController create a function to get all users. you can put both the function to add new user and fetch all users in a mother function and return their values using return
+
+  6b) go and make the router in router.js and test it with postman
+  e.g 
+  router.get("/users", userController.getAllUsers);

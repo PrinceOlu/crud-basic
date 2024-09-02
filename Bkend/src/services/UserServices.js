@@ -1,22 +1,39 @@
-const User = require("../models/userSchema"); // Correctly import the User model
+const User = require("../models/userSchema");
 
-class UserServices {
-  // Asynchronous method to create a new user
-  async createUser(name, email, phone) {
+const userServices = () => {
+  const createUser = async (name, email, phone) => {
     try {
       // Create a new User instance
       const newUser = new User({ name, email, phone });
+
       // Save the new user to the database
       await newUser.save();
-      console.log("User created successfully");
-      return newUser; // Optionally return the created user
-    } catch (error) {
-      // Log any errors that occur
-      console.error("Error creating user:", error);
-      throw error; // Re-throw the error for further handling
-    }
-  }
-}
 
-// Correct the export statement
-module.exports = new UserServices();
+      console.log("User created successfully");
+      // Return the created user
+      return newUser;
+    } catch (error) {
+      console.error("Error creating user:", error);
+      // Re-throw the error to be handled by the caller
+      throw new Error("Error creating user");
+    }
+  };
+
+  const getAllUsers = async () => {
+    try {
+      // Retrieve all users from the database
+      return await User.find();
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      // Handle the error gracefully
+      throw new Error("Error fetching users");
+    }
+  };
+
+  return {
+    createUser,
+    getAllUsers,
+  };
+};
+
+module.exports = userServices;

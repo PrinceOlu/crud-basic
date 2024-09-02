@@ -1,0 +1,15 @@
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{1}: checkout: moving from da39a0f58984259ee31617804493da60001c1ac4 to restore-initial
+[33mda39a0f[m HEAD@{2}: checkout: moving from restore-initial to da39a0f
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{3}: checkout: moving from 517d46af216a520f3838d1f6abf95725fe665a67 to restore-initial
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{4}: checkout: moving from master to 517d46a
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{5}: reset: moving to 517d46a
+[33m92cd72f[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{6}: checkout: moving from restore-initial to master
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{7}: checkout: moving from 517d46af216a520f3838d1f6abf95725fe665a67 to restore-initial
+[33m517d46a[m[33m ([m[1;36mHEAD -> [m[1;32mrestore-initial[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{8}: checkout: moving from master to 517d46a
+[33m92cd72f[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{9}: checkout: moving from 92cd72fffe899f0bece0714d8e09ec4926a4f05e to master
+[33m92cd72f[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{10}: checkout: moving from da39a0f58984259ee31617804493da60001c1ac4 to 92cd72f
+[33mda39a0f[m HEAD@{11}: checkout: moving from master to da39a0f
+[33m92cd72f[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{12}: commit: Update submodule Frontend to latest commit
+[33md523c4d[m HEAD@{13}: merge origin/master: Merge made by the 'ort' strategy.
+[33mda39a0f[m HEAD@{14}: commit (initial): Crud operations using MERN completed
