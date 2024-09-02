@@ -28,7 +28,11 @@ router.post(
   userController.createUser
 );
 
-// Additional routes (example)
+// get all users
 router.get("/users", userController.getAllUsers);
+// get a single user
+router.get("/users/:id", userController.getUserById);
+// update single user
+router.put("/users/:id", userController.updateUser);
 
 module.exports = router;

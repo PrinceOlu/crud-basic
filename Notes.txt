@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=Tkr5Ph6TWIg&list=PLvJa0Vs1x3dXlHdGhYZWFRO1jHieQCqFN&index=14
+
 1 : Basic frontend installations
 npx create-react-app crud-react 
 npx create-react-app frontend
@@ -114,17 +116,53 @@ CORS allows your server to handle requests from different origins when your fron
 run: npm install cors
 import and use it in the server
 
-12: Backend 
-fecting all users
+11)  Backend 
+  import userServices into userController
+  In userController create a function to get all users. you can put both the function to add new-user and fetch all-users in a parent function and return their values using return
 
-13: Frontend 
+b)make the route in router.js and test it with postman
+  e.g 
+  router.get("/users", userController.getAllUsers);
+
+12)  Frontend 
 calling  all users
 npm install react-icons
 npm install react-bootstrap bootstrap
 
+12b) frontend
+at Dashboard import and use useState,useEffect, then design the UI and call the datas
 
 
+13) backend 
+fetch user by id
+@userService create a function to get user by id inside the parent function and return it like this 
+ return {
+    createUser,
+    getAllUsers,
+    getUserById,
+  };
+13b) backend
+In userController create a function to get user by ID. you can put both the function to add new-user, fetch all-users and fetch user by ID in a parent function .
 
+13c) create a route for it in the router and test with postman
+// get a single user
+router.get("/users/:id", userController.getUserById);
 
+14) frontend 
+to edit the single user from frontend. go to dashboard and write a handleEdit function. this function shoud fetch the id and navigate to updateUser.js
 
+14b) go to updateUser.js 
 
+15) backend
+go to userService and  create the function to update the user and return it 
+ return {
+    createUser,
+    getAllUsers,
+    getUserById,
+    updateUser,
+  };
+
+  15b) go to userController.js
+  create a function to update the user
+
+  15c) create a route for updateUser in the router

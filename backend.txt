@@ -50,8 +50,23 @@ return {
 
   6) Backend 
   import userServices into userController
-  In userController create a function to get all users. you can put both the function to add new user and fetch all users in a mother function and return their values using return
+  In userController create a function to get all users. you can put both the function to add new-user and fetch all-users in a parent function and return their values using return
 
   6b) go and make the router in router.js and test it with postman
   e.g 
   router.get("/users", userController.getAllUsers);
+
+  7) backend 
+fetch user by id
+@userService create a function to get user by id inside the parent function and return it like this 
+ return {
+    createUser,
+    getAllUsers,
+    getUserById,
+  };
+7b) backend
+In userController create a function to get user by ID. you can put both the function to add new-user, fetch all-users and fetch user by ID in a parent function .
+
+7c) create a route for it in the router and test with postman
+// get a single user
+router.get("/users/:id", userController.getUserById);
