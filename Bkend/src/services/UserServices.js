@@ -54,12 +54,22 @@ const userServices = () => {
       throw new Error("Error updating user");
     }
   };
-
+  const deleteUser = async (userId) => {
+    try {
+      // Retrieve user by ID from the database
+      return await User.findByIdAndDelete(userId);
+    } catch (error) {
+      console.error("Error fetching user by ID:", error.message);
+      // Handle the error gracefully
+      throw new Error("Error fetching user by ID");
+    }
+  };
   return {
     createUser,
     getAllUsers,
     getUserById,
     updateUser,
+    deleteUser,
   };
 };
 

@@ -75,3 +75,5 @@ npm install react-bootstrap bootstrap
 
 8b) frontend
 at Dashboard import and use useState,useEffect, then design the UI and call the datas
+
+8c) create a function handleDelete in the dashboard that is linked to the delete button.

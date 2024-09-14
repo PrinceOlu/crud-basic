@@ -70,3 +70,8 @@ In userController create a function to get user by ID. you can put both the func
 7c) create a route for it in the router and test with postman
 // get a single user
 router.get("/users/:id", userController.getUserById);
+
+
+8) at userServices create the delete function
+9) at userController create the deletedUser function
+10) create the route for delete
